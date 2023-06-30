@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
-import  FetchMoveiDetails  from 'API/FetchMoveiDetails';
+import  {fetchMoveiDetails}  from 'API/FetchMovies';
 import { useEffect, useRef, useState, Suspense } from "react";
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './MovieDetails.module.css';
+import  thumbnail  from 'DefaultPics/default-thumbnail.jpg';
 const MovieDetails = () => {
     const location = useLocation()
     const backLinkLock = useRef(location.state?.from ?? '/')
@@ -12,7 +13,7 @@ const MovieDetails = () => {
     const [movieParams, setMovieParams] = useState({});
     const params = useParams();
     useEffect(() => {
-        FetchMoveiDetails(params.movieId).then(param => {
+        fetchMoveiDetails(params.movieId).then(param => {
             setMovieParams({...param});
         })    
     },[params])
@@ -21,10 +22,14 @@ const MovieDetails = () => {
     const procentage = `${Math.round(movieParams.vote_average * 100 )}`
     
     return <div className={css.MovieDetails}>
-        <Link  to={backLinkLock.current}><button  className={css.BackBtn} type="button">Go Back</button></Link>
+        <Link to={backLinkLock.current}>
+            <button className={css.BackBtn} type="button">Go Back</button>
+        </Link>
         <div className={css.MovieCard}>
 
-            <img className={css.MovieImg} src={'https://image.tmdb.org/t/p/w500' + movieParams.poster_path} alt={movieParams.title} />
+            <img className={css.MovieImg}
+                src={movieParams.poster_path ? 'https://image.tmdb.org/t/p/w500' + movieParams.poster_path : thumbnail}
+                alt={movieParams.title} />
 
             <div className={css.MovieInfo}>
         <h2>{movieParams.title} ({year.slice(0,4)})</h2>
