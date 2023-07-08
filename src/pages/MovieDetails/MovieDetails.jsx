@@ -10,14 +10,16 @@ const MovieDetails = () => {
 
   
 
-    const [movieParams, setMovieParams] = useState({});
+    const [movieParams, setMovieParams] = useState(null);
     const params = useParams();
     useEffect(() => {
         fetchMoveiDetails(params.movieId).then(param => {
             setMovieParams({...param});
         })    
     },[params])
-    
+    if (!movieParams) {
+        return
+    }
     const year = `${movieParams.release_date}`;
     const procentage = `${Math.round(movieParams.vote_average * 100 )}`
     
