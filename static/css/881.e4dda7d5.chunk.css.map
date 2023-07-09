@@ -1,1 +1,1 @@
-{"version":3,"file":"static/css/881.e4dda7d5.chunk.css","mappings":"AAAA,0BAEI,iBAAkB,CADlB,gBAEJ","sources":["pages/Movies/Movies.module.css"],"sourcesContent":[".MoviesForm{\n    padding-top: 20px;\n    padding-left: 20px;\n}\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"static/css/881.e4dda7d5.chunk.css","mappings":"AAAA,0BAEC,iBAAkB,CADlB,gBAED","sources":["pages/Movies/Movies.module.css"],"sourcesContent":[".MoviesForm {\n\tpadding-top: 20px;\n\tpadding-left: 20px;\n}\n"],"names":[],"sourceRoot":""}
