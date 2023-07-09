@@ -1,44 +1,43 @@
-.MovieDetails{
-    padding-top: 4px;
+.MovieDetails {
+	padding-top: 4px;
 }
-.MovieCard{
-    padding-right: 20px;
-    display: flex;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-            0px 10px 5px 0px rgba(0, 0, 0, 0.14);
+.MovieCard {
+	padding-right: 20px;
+	display: flex;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 10px 5px 0px rgba(0, 0, 0, 0.14);
 }
-.BackBtn{
-    margin-left: 20px;
-    cursor: pointer;
+.BackBtn {
+	margin-left: 20px;
+	cursor: pointer;
 }
-.MovieImg{
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-.Genres{
-    display: flex;
-}
-.GenreItem{
-    margin-right: 5px;
+.MovieImg {
+	padding-left: 20px;
+	padding-right: 15px;
+	padding-bottom: 15px;
 }
 
-.AddInfo{
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+.Genres {
+	display: flex;
+}
+.GenreItem {
+	margin-right: 5px;
 }
 
-.AddList{
-    list-style: none;
+.AddInfo {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-.AddListLink{
-    font-size: 20px;
-    font-weight: 400px;
-    color: blueviolet;
-    text-decoration: none;
-    &:hover {
-            color:rgb(174, 88, 255);
-        }
+
+.AddList {
+	list-style: none;
+}
+.AddListLink {
+	font-size: 20px;
+	font-weight: 400px;
+	color: blueviolet;
+	text-decoration: none;
+	&:hover {
+		color: rgb(174, 88, 255);
+	}
 }
